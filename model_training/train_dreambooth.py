@@ -60,7 +60,7 @@ from diffusers.utils.torch_utils import is_compiled_module
 
 
 if is_wandb_available():
-    import wandb
+    import wandb # type: ignore
 
 # Will error if the minimal version of diffusers is not installed. Remove at your own risks.
 check_min_version("0.33.0.dev0")
@@ -217,7 +217,7 @@ def import_model_class_from_model_name_or_path(pretrained_model_name_or_path: st
 
         return CLIPTextModel
     elif model_class == "RobertaSeriesModelWithTransformation":
-        from diffusers.pipelines.alt_diffusion.modeling_roberta_series import RobertaSeriesModelWithTransformation
+        from diffusers.pipelines.alt_diffusion.modeling_roberta_series import RobertaSeriesModelWithTransformation # type: ignore
 
         return RobertaSeriesModelWithTransformation
     elif model_class == "T5EncoderModel":
