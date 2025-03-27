@@ -176,3 +176,6 @@ cython_debug/
 
 .pepe/**
 **.png
+**.jpeg
+
+model_training/trained_model/**

@@ -17,7 +17,7 @@ def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
 
     if response.status_code == 200:
-        with open("generated_image.png", "wb") as f:
+        with open("./data/output/generated_image.png", "wb") as f:
             f.write(response.content)
         print("✅ Image generated successfully!")
     else:
@@ -26,7 +26,7 @@ def query(payload):
     return response.content
 
 image_bytes = query({
-    "inputs": "./pic.png",
+    "inputs": "./data/input/pic.png",
     "parameters": {
         "prompt": "A hyper-realistic photo of a black shar pei with gold chains, color palette background, cinematic lighting, ultra-detailed, 4K",
         "negative_prompt": "blurry, distorted, deformed, low quality, extra limbs",
