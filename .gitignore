@@ -177,5 +177,9 @@ cython_debug/
 .pepe/**
 **.png
 **.jpeg
+**.jpg
+**.PNG
+**.JPG
+**.JPEG
 
 model_training/trained_model/**
