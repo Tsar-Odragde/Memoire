@@ -11,9 +11,8 @@ def preprocess_images(input_dir, output_dir, image_size=(512, 512)):
                 img.save(os.path.join(output_dir, filename))
 
 # Example usage:
-user_id = 'test_user'
+user_id = 'user_1'
 model_id = 'test_model'
 input_directory = f'data/input/{user_id}/{model_id}/raw_images'
 output_directory = f'data/input/{user_id}/{model_id}/processed_images'
-dataset_directory = f'data/input/{user_id}/{model_id}/processed_dataset'
 preprocess_images(input_directory, output_directory)
